@@ -222,8 +222,8 @@ The final model achieved strong classification performance and was selected base
 
 ##  Team Members
 
-- jimshad
-- ashik 
+- hashik
+- jimshad 
 - anshad
 - afshan
 
