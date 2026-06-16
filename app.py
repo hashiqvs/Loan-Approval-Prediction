@@ -155,10 +155,13 @@ div.stButton > button:hover {
 # ------------------------------------------------------------------
 @st.cache_resource
 def load_pipeline():
-    return joblib.load("loan_approval_pipeline.pkl")
+    try:
+        return joblib.load("loan_approval_pipeline.pkl")
+    except Exception as e:
+        st.error(f"Model loading failed: {e}")
+        st.stop()
 
 pipeline = load_pipeline()
-
 # ------------------------------------------------------------------
 # Header
 # ------------------------------------------------------------------
